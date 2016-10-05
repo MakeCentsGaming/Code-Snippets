@@ -31,6 +31,7 @@ All creators have been credited and if a link to there modding profile was found
 ### Awesome open sourced projects
 - [Infected Mp Mode](https://github.com/DidUknowiPwn/Infected-T7)
 - [Prop Hunt Mp Mode](https://github.com/DidUknowiPwn/Prop-Hunt-T7)
+- [Party Game Modes](https://github.com/DidUknowiPwn/Party-Modes-T7)
 
 # Contributors
 - Shiny: `Zombie Code Weapon list, Workshop.json, `
