@@ -4,10 +4,30 @@
         Spawns weapons into MP
 
     NOTE:
+        Just hand it a weapon string and a location
+*/
+function spawnWeapon( stringWeapon = false, org )
+{
+    if( stringWeapon )
+        return false;
+
+    weapon = GetWeapon(stringWeapon);
+    spawned_weapon = spawn("weapon_" + weapon.name + "_mp", org + (0,0,12));
+    spawned_weapon ItemWeaponSetAmmo(weapon.clipSize, weapon.maxammo);
+}
+
+// ALTERNATIVE: Less common useage. Fun with functions.
+/*
+    -- Credit to: MiKeY (aokmikey@gmail.com)
+    DESC:
+        Spawns weapons into MP
+
+    NOTE:
         Code as is will spawn weapons on the tdm spawn points and will pick out
         of a random array of guns. Please change as needed. The most important
         parts are the pickUpWatcher and the way Spawn is being used.
 */
+
 function spawnRandomWeapons()
 {
     spawnpoints = spawnlogic::get_spawnpoint_array("mp_tdm_spawn");
