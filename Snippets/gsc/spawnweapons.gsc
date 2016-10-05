@@ -18,18 +18,7 @@ function spawnRandomWeapons()
 
     foreach( points in spawnpoints ) {
         weapon = "weapon_" + weaponsList_array[randomintrange(0, weaponsList_array.size)] + "_mp";
-        gun = Spawn(weapon, points.origin+(0, 0, 30));
-        gun thread pickUpWatcher();
-    }
-}
-
-function pickUpWatcher( ) {
-    while( true ) {
-        self waittill("trigger", player);
-        wait 0.4;
-        player GiveMaxAmmo(player GetCurrentWeapon());
-        player GiveStartAmmo(player GetCurrentWeapon());
-        self delete();
-        break;
+        spawned_weapon = Spawn(weapon, points.origin+(0, 0, 30));
+        spawned_weapon ItemWeaponSetAmmo(weapon.clipSize, weapon.maxammo);
     }
 }
